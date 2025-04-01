@@ -1,4 +1,5 @@
 # MCP Atlassian Server
+[![smithery badge](https://smithery.ai/badge/@petrsovadina/mcp-atlassian)](https://smithery.ai/server/@petrsovadina/mcp-atlassian)
 
 MCP server pro integraci Atlassian produktů (Confluence, Jira) s Model Context Protocol. Tento nástroj umožňuje snadný přístup k vašemu Confluence obsahu a Jira ticketům přímo přes MCP rozhraní.
 
@@ -15,6 +16,15 @@ MCP server pro integraci Atlassian produktů (Confluence, Jira) s Model Context 
 
 ## Instalace
 
+### Installing via Smithery
+
+To install Atlassian Integration Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@petrsovadina/mcp-atlassian):
+
+```bash
+npx -y @smithery/cli install @petrsovadina/mcp-atlassian --client claude
+```
+
+### Manual Installation
 ```bash
 git clone https://github.com/petrsovadina/mcp-atlassian.git
 cd mcp-atlassian
