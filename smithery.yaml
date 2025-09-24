@@ -12,27 +12,24 @@ startCommand:
     properties:
       CONFLUENCE_URL:
         type: string
-        description: "URL of your Confluence instance. Example:
-          https://your-domain.atlassian.net/wiki"
+        description: "URL of your Confluence instance. Example: https://your-domain.atlassian.net/wiki"
       CONFLUENCE_USERNAME:
         type: string
-        description: Username or email for Confluence authentication.
+        description: "Username or email for Confluence authentication."
       CONFLUENCE_API_TOKEN:
         type: string
-        description: API token for Confluence.
-  commandFunction:
-    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
-    |-
+        description: "API token for Confluence."
+  commandFunction: |-
     (config) => ({
       command: 'node',
       args: ['build/index.js'],
       env: {
         CONFLUENCE_URL: config.CONFLUENCE_URL,
         CONFLUENCE_USERNAME: config.CONFLUENCE_USERNAME,
-        CONFLUENCE_API_TOKEN: config.CONFLUENCE_API_TOKEN,
+        CONFLUENCE_API_TOKEN: config.CONFLUENCE_API_TOKEN
       }
     })
   exampleConfig:
-    CONFLUENCE_URL: https://your-domain.atlassian.net/wiki
-    CONFLUENCE_USERNAME: your-email@domain.com
-    CONFLUENCE_API_TOKEN: your-confluence-api-token
+    CONFLUENCE_URL: "https://your-domain.atlassian.net/wiki"
+    CONFLUENCE_USERNAME: "your-email@domain.com"
+    CONFLUENCE_API_TOKEN: "your-confluence-api-token"
