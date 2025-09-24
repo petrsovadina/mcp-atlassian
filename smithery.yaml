@@ -9,9 +9,6 @@ startCommand:
       - CONFLUENCE_URL
       - CONFLUENCE_USERNAME
       - CONFLUENCE_API_TOKEN
-      - JIRA_URL
-      - JIRA_USERNAME
-      - JIRA_API_TOKEN
     properties:
       CONFLUENCE_URL:
         type: string
@@ -23,15 +20,6 @@ startCommand:
       CONFLUENCE_API_TOKEN:
         type: string
         description: API token for Confluence.
-      JIRA_URL:
-        type: string
-        description: "URL of your Jira instance. Example: https://your-domain.atlassian.net"
-      JIRA_USERNAME:
-        type: string
-        description: Username or email for Jira authentication.
-      JIRA_API_TOKEN:
-        type: string
-        description: API token for Jira.
   commandFunction:
     # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
     |-
@@ -42,15 +30,9 @@ startCommand:
         CONFLUENCE_URL: config.CONFLUENCE_URL,
         CONFLUENCE_USERNAME: config.CONFLUENCE_USERNAME,
         CONFLUENCE_API_TOKEN: config.CONFLUENCE_API_TOKEN,
-        JIRA_URL: config.JIRA_URL,
-        JIRA_USERNAME: config.JIRA_USERNAME,
-        JIRA_API_TOKEN: config.JIRA_API_TOKEN
       }
     })
   exampleConfig:
     CONFLUENCE_URL: https://your-domain.atlassian.net/wiki
     CONFLUENCE_USERNAME: your-email@domain.com
     CONFLUENCE_API_TOKEN: your-confluence-api-token
-    JIRA_URL: https://your-domain.atlassian.net
-    JIRA_USERNAME: your-email@domain.com
-    JIRA_API_TOKEN: your-jira-api-token
