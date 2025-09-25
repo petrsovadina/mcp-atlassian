@@ -1,17 +1,16 @@
 {
-  "name": "mcp-atlassian",
+  "name": "mcp-confluence",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "tsc && chmod +x build/index.js",
+    "build": "npx tsc",
     "start": "node build/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.8.0",
-    "axios": "^1.6.7"
+    "axios": "^1.6.7",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.24"
   },
-  "devDependencies": {
-    "@types/node": "^20.11.24",
-    "typescript": "^5.3.3"
-  }
+  "devDependencies": {}
 }
