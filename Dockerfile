@@ -19,4 +19,3 @@ RUN npm run build
 # Expose any port if required (not explicitly needed for MCP over stdio)
 
 # Command to start the server
-CMD ["npm", "start"]
