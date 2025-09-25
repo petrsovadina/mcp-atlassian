@@ -5,7 +5,7 @@ FROM node:lts-alpine
 WORKDIR /app
 
 # Copy package.json and package-lock.json if available
-COPY package.json ./
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
@@ -19,4 +19,3 @@ RUN npm run build
 # Expose any port if required (not explicitly needed for MCP over stdio)
 
 # Command to start the server
-CMD ["npm", "start"]
