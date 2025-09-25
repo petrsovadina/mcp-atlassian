@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "tsc && chmod +x build/index.js",
+    "build": "npx tsc",
     "start": "node build/index.js"
   },
   "dependencies": {
